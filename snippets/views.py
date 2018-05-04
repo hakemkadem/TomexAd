@@ -7,6 +7,14 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
+
+def TestFromHomeIndex(request):
+   return render(request,'snippets/main.html')
+
+
+def TestIndex(request):
+   return render(request,'snippets/Test.html')
+
 @csrf_exempt
 def PostList(request):
     if(request.method=="GET"):
@@ -20,8 +28,6 @@ def PostList(request):
             seralizer.save()
             return JsonResponse(data==data,status=201)
         return JsonResponse(seralizer.errors,status=401)
-
-
 
 
 
