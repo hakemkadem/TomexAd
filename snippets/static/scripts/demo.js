@@ -10,7 +10,7 @@ $scope.GetData=function(){
 console.log($location.$$host)
  //$http.get('http://'+$location.$$host+':'+$location.$$port+'/Catalog/validate_username/',
 
- $http.get('http://localhost:8000/snippets/post',
+ $http.get('http://radiant-depths-18402.herokuapp.com/snippets/post',
                        {
                        }).success(function (data) {
                           $scope.DatedVault= data;
