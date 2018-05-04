@@ -10,14 +10,14 @@ $scope.GetData=function(){
 console.log($location.$$host)
  //$http.get('http://'+$location.$$host+':'+$location.$$port+'/Catalog/validate_username/',
 
- $http.get('http://radiant-depths-18402.herokuapp.com/snippets/post',
+ $http.get('https://radiant-depths-18402.herokuapp.com/snippets/post',
                        {
                        }).success(function (data) {
                           $scope.DatedVault= data;
 console.log($scope.DatedVault)
 console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                        }).error(function (error, status) {
-console.log('http://'+$location.$$host+':'+$location.$$port+'/snippets/post')
+console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                        });
                        };
 
