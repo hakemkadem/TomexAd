@@ -15,7 +15,7 @@ console.log($location.$$host)
                        }).success(function (data) {
                           $scope.DatedVault= data;
 console.log($scope.DatedVault)
-console.log('http://'+$location.$$host+':'+$location.$$port+'/snippets/post')
+console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                        }).error(function (error, status) {
 console.log('http://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                        });
