@@ -4,3 +4,13 @@ text-align: center;
 color: red;
 font-size: 26px;
 }
+
+.ClassTestHeader{
+    color:red;
+    text-align: center;
+}
+
+.ClassMainHeader{
+    color:blue;
+    text-align: center;
+}
