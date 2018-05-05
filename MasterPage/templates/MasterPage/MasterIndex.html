@@ -11,14 +11,40 @@
      <script src="{% static 'scripts/demo.js' %}" ></script>
 </head>
 <body style=" direction:rtl">
-<div style="      padding: 10px;
-    background-color: #80808014;
-    box-shadow: inset 2px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
-  box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);">
+<div style="         box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+    width: auto;
+    height: 40px;
+    padding: 10px 40px;
+    padding-bottom: 40px;
+    background: #8888881f;
+    line-height: 40px;
+    color: #286090;
+    overflow: hidden;">
     <img class="img-responsive" src="{%static 'media/TomexLogo.png'%}" style="    width:7%;"/>
-</div>
 
+    <div style=" position: absolute;
+    left: 30px;
+    top: 3px;
+    float: right;
+    padding: 0;
+    margin: 0 0 0 20px;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: right;">
+        {% if user.is_authenticated %}
+  Hi {{ user.username }}!
+        <a href="{% url 'logout' %}">logout</a>
+{% else %}
+  <p style="    display: inline;">You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+    </div>
+</div>
+<div style="padding: 3%;">
 <div class="TitleStyleClass">I AM MASTER PAGE AND MY CHILDREN ARE</div>
+
 {% if user.is_authenticated %}
 <span class="glyphicon glyphicon-thumbs-up"></span>
 <table class="table table-bordered">
@@ -39,6 +65,6 @@
 {% block content %}
 {% endblock %}
 
-
+</div>
 </body>
 </html>
