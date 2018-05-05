@@ -19,6 +19,7 @@
 </div>
 
 <div class="TitleStyleClass">I AM MASTER PAGE AND MY CHILDREN ARE</div>
+{% if user.is_authenticated %}
 <span class="glyphicon glyphicon-thumbs-up"></span>
 <table class="table table-bordered">
     <tr>
@@ -34,7 +35,7 @@
         <td><a  href="{%url 'snippets:Testifying' %}">Go to Test Page of snippet</a></td>
     </tr>
 </table>
-
+{% endif %}
 {% block content %}
 {% endblock %}
 

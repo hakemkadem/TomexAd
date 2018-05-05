@@ -14,3 +14,16 @@ font-size: 26px;
     color:blue;
     text-align: center;
 }
+
+.customClassLogin{
+    width: 20%;
+    background-color: #8080801f;
+    padding: 40px;
+    margin: auto !important;
+    margin-top: 15% !important;
+    }
+
+   .CustomLoginBtn{
+       padding-top: 10px;
+    text-align: center;
+   }
