@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7074f373-2858-47c5-9ba8-68cf8f4b70b4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/MasterPage/static/css/MasterStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasterPage/templates/MasterPage/HomePage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasterPage/templates/MasterPage/MasterIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasterPage/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippets/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippets/static/scripts/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoReact/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoReact/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoReact/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoReact/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/templates/snippets/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/templates/snippets/Test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/templates/snippets/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/templates/snippets/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets/static/css/bootstrap.min.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +16,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snippets/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+            <state relative-caret-position="192">
+              <caret line="8" column="61" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="61" />
               <folding>
                 <element signature="e#1#33#0" expanded="true" />
               </folding>
@@ -67,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomePage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MasterPage/templates/MasterPage/HomePage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -103,33 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snippets/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#547#1004#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterIndex.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MasterIndex.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MasterPage/templates/MasterPage/MasterIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="207">
+              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -175,11 +141,11 @@
         <option value="$PROJECT_DIR$/snippets/templates/snippets/Test.html" />
         <option value="$PROJECT_DIR$/snippets/static/css/style.css" />
         <option value="$PROJECT_DIR$/snippets/urls.py" />
-        <option value="$PROJECT_DIR$/MasterPage/templates/MasterPage/MasterIndex.html" />
         <option value="$PROJECT_DIR$/MasterPage/views.py" />
         <option value="$PROJECT_DIR$/MasterPage/urls.py" />
         <option value="$PROJECT_DIR$/DjangoReact/urls.py" />
         <option value="$PROJECT_DIR$/MasterPage/templates/MasterPage/HomePage.html" />
+        <option value="$PROJECT_DIR$/MasterPage/templates/MasterPage/MasterIndex.html" />
       </list>
     </option>
   </component>
@@ -212,38 +178,26 @@
             <path>
               <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterPage" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterPage" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="MasterPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
               <item name="snippets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
               <item name="snippets" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
+              <item name="snippets" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TomexAd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TomexAd" type="462c0819:PsiDirectoryNode" />
               <item name="snippets" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="snippets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,7 +252,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25313947" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -585,30 +538,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MasterPage/templates/MasterPage/MasterIndex.html">
+    <entry file="file://$PROJECT_DIR$/snippets/templates/snippets/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="2" column="19" lean-forward="true" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snippets/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+        <state relative-caret-position="192">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="61" />
           <folding>
             <element signature="e#1#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snippets/templates/snippets/main.html">
+    <entry file="file://$PROJECT_DIR$/DjangoReact/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="19" lean-forward="true" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="168">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjangoReact/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="e#1#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -618,6 +578,16 @@
           <caret line="8" column="12" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasterPage/templates/MasterPage/HomePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -632,29 +602,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoReact/urls.py">
+    <entry file="file://$PROJECT_DIR$/MasterPage/templates/MasterPage/MasterIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="207">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
           <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjangoReact/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterPage/templates/MasterPage/HomePage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
