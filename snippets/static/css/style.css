@@ -1,3 +1,9 @@
-.ClassStyle{
-Background-color: red;
+.ClassTestHeader{
+    color:red;
+    text-align: center;
+}
+
+.ClassMainHeader{
+    color:blue;
+    text-align: center;
 }

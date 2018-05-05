@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'css/MasterStyle.css' %}">
+         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <script src="{% static 'scripts/jquery.js' %}" ></script>
+     <script src="{% static 'scripts/angular.min.js' %}" ></script>
+     <script src="{% static 'scripts/demo.js' %}" ></script>
+</head>
+<body style=" direction:rtl">
+<div class="TitleStyleClass">I AM MASTER PAGE AND MY CHILDREN ARE</div>
+<table class="table table-bordered">
+    <tr>
+        <td>الروابط</td>
+            </tr>
+    <tr> <td><a href="{%url 'masters:Home'  %}">Home Page</a></td></tr>
+<tr>
+
+     <td><a  href="{%url 'snippets:MainPage' %}">Go To Main Page of snippet</a><br></td>
+        <!--<td><a  href="{%url 'MainTest' %}">Go To Main Page of snippet</a><br></td>-->
+    </tr>
+    <tr>
+        <td><a  href="{%url 'snippets:Testifying' %}">Go to Test Page of snippet</a></td>
+    </tr>
+</table>
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>
