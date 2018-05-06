@@ -62,6 +62,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# Custom middleware
+    'DjangoReact.middleware.OnlineNowMiddleware',
+
 ]
 
 ROOT_URLCONF = 'DjangoReact.urls'
@@ -154,5 +157,7 @@ STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'Master/'
 LOGOUT_REDIRECT_URL = '/'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
