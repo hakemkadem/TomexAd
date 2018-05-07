@@ -35,10 +35,10 @@
     text-align: right;">
         {% if user.is_authenticated %}
   Hi {{ user.username }}!
-        <a href="{% url 'logout' %}?next={% url 'login'%}">logout</a>
+        <a href="{% url 'logout' %}">logout</a>
 {% else %}
   <p style="    display: inline;">You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+  <a href="{% url 'login' %}?next={% url 'masters:Home'%}">login</a>
 {% endif %}
     </div>
 </div>

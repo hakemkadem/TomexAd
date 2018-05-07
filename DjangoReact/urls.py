@@ -14,7 +14,7 @@ urlpatterns = [
     path('TestIndex',TestFromHomeIndex,name="MainTest"),
     path('Post',PostList),
     path('accounts/',include('django.contrib.auth.urls')),
-    path('',auth_views.login )
+    path('',auth_views.login)
 ]
 
 
