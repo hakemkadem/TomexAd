@@ -4,10 +4,11 @@
  {% load static %}
 
 <div style="text-align:center; font-size:30px"> I am Home Page</div>
-{% if request.user in request.online_now %}
 
-   Active users: {{ request.online_now.count }}
-{% endif %}
+<br>
+
+
+
 <!--<a href="{%url 'masters:Master' %}">Go to Master Page</a><br>-->
 <!--Hi from Home page  <a  href="{%url 'masters:Master' %}">Back to Snipptes</a>-->
 {% endblock %}

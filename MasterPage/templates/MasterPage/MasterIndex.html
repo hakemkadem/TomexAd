@@ -10,7 +10,7 @@
      <script src="{% static 'scripts/angular.min.js' %}" ></script>
      <script src="{% static 'scripts/demo.js' %}" ></script>
 </head>
-<body style=" direction:rtl">
+<body style=" direction:rtl" ng-app="myApp" ng-controller="MyController">
 <div style="         box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
     width: auto;
     height: 40px;
@@ -44,7 +44,15 @@
 </div>
 <div style="padding: 3%;">
 <div class="TitleStyleClass">I AM MASTER PAGE AND MY CHILDREN ARE</div>
-
+    {% if request.user in request.online_now %}
+   Active users: [[DatedVault.Data]]
+{% endif %}
+<ul ng-repeat="c in DatedVault">
+    <li >[[c.user]]</li>
+    <li >[[c.title]]</li>
+    <li >[[c.contents]]</li>
+    <li >[[c.timestamp]]</li>
+</ul>
 {% if user.is_authenticated %}
 <span class="glyphicon glyphicon-thumbs-up"></span>
 <table class="table table-bordered">

@@ -6,11 +6,28 @@ $interpolateProvider.endSymbol(']]');
 
 myApp.controller("MyController", ["$scope","$location","$http", function($scope, $location, $http) {
 $scope.myName = "Hakim Adil Will Win in Django";
+
+
+
+ setInterval(function() {
+$http.get('http://localhost:8000/snippets/currentUsers',{})
+                         .success(function (data) {
+                          $scope.DatedVault= data;
+                          console.log($scope.DatedVault)
+                       }).error(function (error, status) {
+                       });
+}, 1000);
+
+
+
+
+
+
 $scope.GetData=function(){
 console.log($location.$$host)
  //$http.get('http://'+$location.$$host+':'+$location.$$port+'/Catalog/validate_username/',
-
- $http.get('https://radiant-depths-18402.herokuapp.com/snippets/post',
+ //$http.get('https://radiant-depths-18402.herokuapp.com/snippets/post',
+ $http.get('http://localhost:8000/snippets/post',
                        {
                        }).success(function (data) {
                           $scope.DatedVault= data;

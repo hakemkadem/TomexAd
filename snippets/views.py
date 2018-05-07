@@ -38,15 +38,8 @@ from django.core import serializers;
 
 @csrf_exempt
 def ActiveUsers(request):
-    active_sessions = Session.objects.filter(expire_date__gte=timezone.now())
-
-    user_id_list = []
-    for session in active_sessions:
-        data = session.get_decoded()
-        user_id_list.append(data.get('_auth_user_id', None))
-    # Query all logged in users based on id list
-
-    data = {"Data":user_id_list}
+    counts =request.online_now.count();
+    data = {"Data":counts}
     return JsonResponse(data)
 
 
