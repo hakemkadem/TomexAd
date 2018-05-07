@@ -43,3 +43,6 @@ class OnlineNowMiddleware(MiddlewareMixin):
         request.__class__.online_now_ids = online_now_ids
         request.__class__.online_now = property(get_online_now)
 
+ # Set the new cache
+        cache.set('online-%s' % (request.user.pk,), True, ONLINE_THRESHOLD)
+        cache.set('online-now', online_now_ids, ONLINE_THRESHOLD)

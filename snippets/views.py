@@ -38,7 +38,6 @@ from django.core import serializers;
 
 @csrf_exempt
 def ActiveUsers(request):
-
     active_sessions = Session.objects.filter(expire_date__gte=timezone.now())
 
     user_id_list = []
