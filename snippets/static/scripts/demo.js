@@ -10,7 +10,7 @@ $scope.myName = "Hakim Adil Will Win in Django";
 
 
  setInterval(function() {
-$http.get('http://localhost:8000/snippets/currentUsers',{})
+$http.get('https://radiant-depths-18402.herokuapp.com/snippets/currentUsers',{})
                          .success(function (data) {
                           $scope.DatedVault= data;
                           console.log($scope.DatedVault)
