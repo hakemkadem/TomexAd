@@ -76,7 +76,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
 
 from reportlab.lib.pagesizes import letter, inch
-import 
+
 cm = 2.54
 
 def some_view(request):
