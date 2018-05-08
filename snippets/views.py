@@ -7,12 +7,17 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from django.contrib.auth.models import User
-from django.contrib.sessions.models import Session
-from django.utils import timezone
-from django.http import HttpResponse;
-from django.core import serializers;
 from snippets.models import Post
+from django.http import HttpResponse
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle,Paragraph
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.lib.pagesizes import letter, inch
+from reportlab.pdfbase.ttfonts import TTFont
 import json
+from bidi.algorithm import get_display
+from django.conf import settings
 
 
 def TestFromHomeIndex(request):
@@ -70,28 +75,27 @@ def TestGet(request):
     #                          content_type='application/json')
 
 
-from django.http import HttpResponse
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle,Paragraph
-from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
 
-from reportlab.lib.pagesizes import letter, inch
+
 
 cm = 2.54
 
-def some_view(request):
-    # Create the HttpResponse object with the appropriate PDF headers.
-    # response = HttpResponse(content_type='application/pdf')
-    # response['Content-Disposition'] = 'attachment; filename="somefilename.pdf"'
 
+
+
+import arabic_reshaper
+def some_view(request):
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename=somefilename.pdf'
-
     style = ParagraphStyle(
         name='Normal',
-
         fontSize=8,
+
     )
+
+
+    pdfmetrics.registerFont(TTFont("times", settings.BASE_DIR+"/snippets/static/fonts/times.ttf"))
+
     doc = SimpleDocTemplate(response, pagesize=letter)
     # container for the 'Flowable' objects
     elements = []
@@ -115,12 +119,36 @@ def some_view(request):
     elements.append(t)
     # write the document to disk
     styles = getSampleStyleSheet()
-    elements.append(Paragraph("حاكم الكنبي", style = style))
+    barcode_string = '<font name="times" size="12">%s</font>' % User.objects.filter(username="حاكم")[0].username
+    text=get_display(arabic_reshaper.reshape( barcode_string))
+    elements.append( Paragraph(text, style=style))
     doc.build(elements)
-
     return response
 
-    # return response
 
 
-
+from django.http import HttpResponse
+from django.views.generic import View
+from DjangoReact.utils  import render_to_pdf  # created in step 4
+from django.template.loader import get_template
+@csrf_exempt
+def htmlpdf(request,*args, **kwargs):
+            template = get_template('snippets/pdf.html')
+            context = {
+                "invoice_id": 123,
+                "customer_name":User.objects.filter(username="حاكم")[0].username,
+                "amount": 1399.99,
+                "today": "Today",
+            }
+            html = template.render(context)
+            pdf = render_to_pdf('snippets/pdf.html', context)
+            if pdf:
+                response = HttpResponse(pdf, content_type='application/pdf')
+                filename = "Invoice_%s.pdf" % ("12341231")
+                content = "inline; filename='%s'" % (filename)
+                download = request.GET.get("download")
+                if download:
+                    content = "attachment; filename='%s'" % (filename)
+                response['Content-Disposition'] = content
+                return response
+            return HttpResponse("Not found")

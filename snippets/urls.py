@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import PostList,TestIndex,TestFromHomeIndex,ActiveUsers,TestGet,TestPost,some_view
+from .views import PostList,TestIndex,TestFromHomeIndex,ActiveUsers,TestGet,TestPost,htmlpdf,some_view
 app_name = 'snippets'
 urlpatterns = [
     path('post', PostList),
