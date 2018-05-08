@@ -8,15 +8,18 @@ myApp.controller("MyController", ["$scope","$location","$http", function($scope,
 $scope.myName = "Hakim Adil Will Win in Django";
 
 
-
- setInterval(function() {
-$http.get('https://radiant-depths-18402.herokuapp.com/snippets/currentUsers',{})
+var GetActiveUsers=function()
+{$http.get('http://localhost:8000/snippets/currentUsers',{})
                          .success(function (data) {
                           $scope.DatedVault= data;
-                          console.log($scope.DatedVault)
                        }).error(function (error, status) {
-                       });
-}, 1000);
+                       });}
+
+                       GetActiveUsers();
+
+setInterval(function() {
+GetActiveUsers()
+                       }, 7000);
 
 
 
@@ -24,19 +27,55 @@ $http.get('https://radiant-depths-18402.herokuapp.com/snippets/currentUsers',{})
 
 
 $scope.GetData=function(){
-console.log($location.$$host)
+//console.log($location.$$host)
  //$http.get('http://'+$location.$$host+':'+$location.$$port+'/Catalog/validate_username/',
  //$http.get('https://radiant-depths-18402.herokuapp.com/snippets/post',
  $http.get('http://localhost:8000/snippets/post',
                        {
                        }).success(function (data) {
-                          $scope.DatedVault= data;
-console.log($scope.DatedVault)
-console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
+//                          $scope.DatedVault= data;
+//                          console.log($scope.DatedVault)
+                            //console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                        }).error(function (error, status) {
-console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
+                            //console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                        });
                        };
+
+
+
+                       $scope.TestGetFun=function(){
+                               $http.get('http://localhost:8000/snippets/testget',
+                               {params: {name: "hakim"}}
+                               ).success(function (data) {
+                               $scope.TestData= data;
+                               console.log(data);
+
+                       }).error(function (error, status) {
+                       });
+                       };
+
+                        $scope.TestPostFun=function(){
+
+                           var Obj=[{'user':'Angular-java',
+                                   'title':'connection django and angular',
+                                   'contents':'1154758',
+                                   'timestamp':"10-20-2018"}]
+                            $http({
+                            method: 'POST',
+//                            url: $location.$$protocol+'://'+$location.$$host+'/Catalog/'+'validate_username/',
+                           url:'http://localhost:8000/snippets/testpost',
+                            data: $.param({ deal: JSON.stringify(Obj) }),
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' }
+                        }).success(function (data, status, headers, config) {
+                        $scope.DatedVault= data;
+                        console.log($scope.DatedVault);
+                        }).error(function (data, status, headers, config) {
+                            // handle error things
+                        });
+
+                        };
+
+
 
                        $scope.PostBook=function(){
                                    var BookObj=[
@@ -66,5 +105,7 @@ console.log('https://'+$location.$$host+':'+$location.$$port+'/snippets/post')
                         });
 
                        };
-                       $scope.GetData();
+                      //  $scope.GetData();
+                         $scope.TestGetFun();
+                         $scope.TestPostFun();
 }]);
