@@ -6,7 +6,7 @@ from snippets.views import TestFromHomeIndex,PostList
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views as auth_views
-
+from snippets.views import user_login
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('snippets/',include('snippets.urls')),
@@ -14,7 +14,8 @@ urlpatterns = [
     path('TestIndex',TestFromHomeIndex,name="MainTest"),
     path('Post',PostList),
     path('accounts/',include('django.contrib.auth.urls')),
-    path('',auth_views.login)
+    path('', user_login, name="userlogin"),
+    #path('',auth_views.login)
 ]
 
 

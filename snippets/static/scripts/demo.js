@@ -11,16 +11,15 @@ $scope.myName = "Hakim Adil Will Win in Django";
 var GetActiveUsers=function()
 {$http.get('http://localhost:8000/snippets/currentUsers',{})
                          .success(function (data) {
-                          $scope.DatedVault= data;
+                          $scope.MyData= data;
                        }).error(function (error, status) {
                        });}
 
-                       GetActiveUsers();
+                       //GetActiveUsers();
 
 setInterval(function() {
 GetActiveUsers()
-                       }, 7000);
-
+                       }, 1000);
 
 
 

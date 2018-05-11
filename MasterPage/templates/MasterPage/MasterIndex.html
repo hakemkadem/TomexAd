@@ -34,7 +34,7 @@
     text-transform: uppercase;
     text-align: right;">
         {% if user.is_authenticated %}
-  Hi {{ user.username }}!
+  Hi {{ request.session.Operator }}- {{user.username}}!
         <a href="{% url 'logout' %}">logout</a>
 {% else %}
   <p style="    display: inline;">You are not logged in</p>
@@ -45,7 +45,7 @@
 <div style="padding: 3%;">
 <div class="TitleStyleClass">I AM MASTER PAGE AND MY CHILDREN ARE</div>
     {% if request.user in request.online_now %}
-   Active users: [[DatedVault.Data]]
+   Active users: [[MyData.Data]]
 {% endif %}
 <ul ng-repeat="c in DatedVault">
     <li >[[c.user]]</li>

@@ -8,6 +8,7 @@ urlpatterns = [
     path('currentUsers',ActiveUsers),
     path('TestIndex',TestIndex,name="Testifying"),
     path('TestFromHomeIndex',TestFromHomeIndex,name="MainPage"),
+
     path('testget',TestGet),
     path('testpost',TestPost),
     path('pdftest',some_view)
